@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/home_logo.ico">
+  <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
 </head>
 <body data-page="contact-section">
   
@@ -36,11 +37,11 @@
 <div class="main hidden">
 <!--Header Start-->
 <header class="header">
-  <div id="WAButton" class="hidden"></div>
+ 
     <div class="container">
-      <a href="index" class="btn link-item btnall">Home</a>
-      <a href="about" class="btn link-item btnall">About Me</a>
-      <a href="project" class="btn link-item btnall">Portfolio</a>
+      <a href="index.html" class="btn link-item btnall">Home</a>
+      <a href="about.html" class="btn link-item btnall">About Me</a>
+      <a href="project.html" class="btn link-item btnall">Portfolio</a>
       <div class="row flex-end">
         <button type="button" class="nav-toggler">
           <span></span>
@@ -48,10 +49,10 @@
         <nav class="nav">
           <div class="nav-inner">
             <ul>
-              <li><a href="index" class="nav-item link-item">Home</a></li>
-              <li><a href="about" class="nav-item link-item">About Me</a></li>
-              <li><a href="project" class="nav-item link-item">Portfolio</a></li>
-              <li><a href="contact" class="nav-item link-item">Contact</a></li>
+              <li><a href="index.html" class="nav-item link-item">Home</a></li>
+              <li><a href="about.html" class="nav-item link-item">About Me</a></li>
+              <li><a href="project.html" class="nav-item link-item">Portfolio</a></li>
+              <li><a href="contact.html" class="nav-item link-item">Contact</a></li>
               <li><a href="https://www.youtube.com/channel/UCOTV7-_mmIV-uuiSy4wJwAQ" target="_blank" class="nav-item link-item">Youtube</a></li>
             </ul>
           </div>
@@ -63,38 +64,21 @@
     
 <!--Contact Section Start-->
 <section class="contact-section sec-padding" id="contact">
+  <div class="row">
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+  </div>
     <div class="container">
-      <div class="row">
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="contact-form">
-          <form name="contact" method="POST" data-netlify="true">
-            <div class="row">
-              <div class="input-group">
-                <input name="name" type="text" placeholder="Your name" class="input-control" required>
-              </div>
-              <div class="input-group">
-                <input name="email" type="email" placeholder="E-mail" class="input-control" required>
-              </div>
-              <div class="input-group">
-                <input name="title" type="text" placeholder="Title" class="input-control" required>
-              </div>
-              <div class="input-group">
-                <textarea name="message" placeholder="Your Message" class="input-control" required></textarea>
-              </div>
-              <div class="submit-btn">
-                <button name="sendMessage" type="button" class="btn msj">Send Message</button>
-              </div>
-            </div>
-          </form>
-        </div>
+      <div class="row center">
         <div class="contact-info">
           <div class="contact-info-item">
             <h3>E-Mail</h3>
             <p>yazilimcierkek@gmail.com</p>
+          </div>
+          <div class="contact-info-item">
+            <h3>E-Mail</h3>
+            <p>javidation.l@gmail.com</p>
           </div>
           <div class="contact-info-item">
             <h3>Telephone</h3>
@@ -112,6 +96,10 @@
               <a href="https://github.com/yazilimcierkek?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
             </div>
           </div>
+          <div class="submit-btn">
+            <a href="mailto:yazilimcierkek@gmail.com" name="sendMessage" type="button" class="btn msj">Send Message</a>
+            <div id="WAButton"></div> 
+          </div>
         </div>
       </div>
     </div>
@@ -119,6 +107,9 @@
 <!--Contact Section End-->
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--Floating WhatsApp css-->
+<script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
 <!--Main end--> 
 <script src="js/script.js"></script>    
 </body>
