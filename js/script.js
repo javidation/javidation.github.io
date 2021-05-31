@@ -7,17 +7,14 @@ window.addEventListener("load",()=>{
     document.querySelector(".page-loader").classList.add("fade-out");
     setTimeout(()=>{
         document.querySelector(".page-loader").style.display= "none";
-    },800);
+    },100); 
     $(function() {
         $('#WAButton').floatingWhatsApp({
-          phone: '+994504702996', //WhatsApp Business phone number International format-
-          //Get it with Toky at https://toky.co/en/features/whatsapp.
-          headerTitle: 'Chat with us on WhatsApp!', //Popup Title
-          popupMessage: 'Hello, how can we help you?', //Popup Message
-          showPopup: true, //Enables popup display
-          buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
-          //headerColor: 'crimson', //Custom header color
-          //backgroundColor: 'crimson', //Custom background button color
+          phone: '+994504702996', 
+          headerTitle: 'Chat with us on WhatsApp!',
+          popupMessage: 'Hello, how can we help you?',
+          showPopup: true,
+          buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />',
           position: "right"    
         });
       });
@@ -86,11 +83,13 @@ function togglePortfiloPopup(){
     document.querySelector(".portfilo-popup").classList.toggle("open");
     document.body.classList.toggle("hide-scrolling");
     document.querySelector(".main").classList.toggle("fade-out");
+    document.querySelector(".pp-close").addEventListener("click",togglePortfiloPopup);
 };
-document.querySelector(".pp-close").addEventListener("click",togglePortfiloPopup);
+
 
 //disariya tiklarken acilir pencereyi gizle
 document.addEventListener("click",(e)=>{
+    
     if(e.target.classList.contains("pp-inner")){
         togglePortfiloPopup();
     };
@@ -131,14 +130,20 @@ function search_project() {
 }
 
 const filterBtnsContainer = document.querySelector(".portfilo-filter");
-filterBtnsContainer.addEventListener("click",(e)=>{
-    if(e.target.classList.contains("portfilo-filter-btn")&&
-    !e.target.classList.contains("active")){
-        filterBtnsContainer.querySelector(".active").classList.remove("active");
-        e.target.classList.add("active");
-        filterItems(e.target);
-    }
-});
+try {
+    filterBtnsContainer.addEventListener("click",(e)=>{
+        if(e.target.classList.contains("portfilo-filter-btn")&&
+        !e.target.classList.contains("active")){
+            filterBtnsContainer.querySelector(".active").classList.remove("active");
+            e.target.classList.add("active");
+            filterItems(e.target);
+            e.stopPropagation();
+        }
+    });
+  }
+  catch(err) {
+    document.getElementById("bir").innerHTML = err.message;
+  }
 
 function filterItems(filterBtn){
      if(!filterBtn )return;
@@ -154,9 +159,3 @@ function filterItems(filterBtn){
     });
 }
 filterItems(document.querySelector(".portfilo-filter-btn.active"));
-
-
-
-
-
-
