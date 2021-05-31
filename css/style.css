@@ -502,7 +502,6 @@ button{
 .home-text h1 {
     font-size: 50px;
     text-transform: capitalize;
-    
 }
 .home-text h2 {
     font-size: 20px;
@@ -514,6 +513,7 @@ button{
 .home-text .btn{
     margin: 0 15px 15px 0;
 }
+
 .home-img .img-box{
     max-width: 360px;
     background-color: var(--white-alpha-25);
@@ -524,6 +524,7 @@ button{
     -3px -3px 40px rgba(80, 79, 79,.40);
 }
 .home-img .img-box img{
+  
     width: 100%;
     border-radius: 50%;
 }
@@ -860,10 +861,18 @@ input[type=text] {
     color: var(--red-color);
 }
 /*contact*/
+.contact-section .container{
+    margin-top: 20px;
+}
 .contact-form,
 .contact-info{
     width: 50%;
     padding: 0 15px;
+}
+.contact-form .btn{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 .contact-form .input-group{
     width: 100%;
@@ -902,10 +911,14 @@ input[type=text] {
     padding: 0 0 0 20px;
 }
 .contact-info-item h3{
-    font-size: 20px;
+    font-size: 23px;
     text-transform: capitalize;
     margin: 0 0 5px;
 }
+.contact-info-item p{
+    font-size: 16px;
+}
+
 .contact-info-item .social-links a{
     display: inline-flex;
     align-items: center;
@@ -914,15 +927,39 @@ input[type=text] {
     width: 40px;
     background-color: var(--white-alpha-25);
     border: 1px solid var(--white-alpha-40);
-    color: var(--red-color);
+    color: var(--white);
     border-radius: 50%;
     transition: font-size .5s inherit;
     margin: 6px 4px 0 0;
     transition: all .3s ease;
 }
-.contact-info-item .social-links a:hover{
+.contact-info-item .social-links a:nth-child(1):hover{
     color:var(--white);
-    background-color: var(--red-color);
+    background-color: #c32aa3;
+}
+.contact-info-item .social-links a:nth-child(2):hover{
+    color:var(--white);
+    background-color: #c32aa3;
+}
+.contact-info-item .social-links a:nth-child(3):hover{
+    color:var(--white);
+    background-color: #1877f2;
+}
+.contact-info-item .social-links a:nth-child(4):hover{
+    color:var(--white);
+    background-color: #1da1f2;
+}
+.contact-info-item .social-links a:nth-child(5):hover{
+    color:var(--white);
+    background-color: #ff0000;
+}
+.contact-info-item .social-links a:nth-child(6):hover{
+    color:var(--white);
+    background-color: #0a66c2;
+}
+.contact-info-item .social-links a:nth-child(7):hover{
+    color:var(--white);
+    background-color: #6e5494;
 }
 .page {
     display: none;
