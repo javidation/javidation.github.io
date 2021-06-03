@@ -5,17 +5,10 @@ window.addEventListener("load",()=>{
     document.querySelector('.'+pageName).classList.add("active");
     /**Page Loader */
     document.querySelector(".page-loader").classList.add("fade-out");
-    //pagination
-    $(function () {
-        var includes = $('[data-include]')
-        $.each(includes, function () {
-          var file = 'components/projects/' + $(this).data('include') + '.html'
-          $(this).load(file)
-        })
-      });
+  
     setTimeout(()=>{
         document.querySelector(".page-loader").style.display= "none";
-    },600); 
+    },100); 
     $(function() {
         $('#WAButton').floatingWhatsApp({
           phone: '+994504702996', 
@@ -25,6 +18,14 @@ window.addEventListener("load",()=>{
           buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />',
           position: "right"    
         });
+      });
+    //pagination
+    $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+          var file = 'components/projects/' + $(this).data('include') + '.html'
+          $(this).load(file)
+        })
       });
 });
 
