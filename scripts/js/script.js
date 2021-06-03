@@ -5,6 +5,14 @@ window.addEventListener("load",()=>{
     document.querySelector('.'+pageName).classList.add("active");
     /**Page Loader */
     document.querySelector(".page-loader").classList.add("fade-out");
+    //pagination
+    $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+          var file = 'components/projects/' + $(this).data('include') + '.html'
+          $(this).load(file)
+        })
+      });
     setTimeout(()=>{
         document.querySelector(".page-loader").style.display= "none";
     },600); 
