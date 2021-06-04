@@ -467,19 +467,14 @@ button{
     color:var(--white);
 }
 .home-text .javid:hover span{
+    color:var(--orange);
     opacity: 1;
     display: none;
 }
 .home-text .javid:hover::before{
+    color:var(--orange);
     width: 100%;
     content: 'About Me';
-    color:var(--cyan-light);
-}
-.home-text .h-button span{
-    display: inline-block;
-    transition: .25s cubic-bezier(.5,- 1, .5, 2);
-    opacity: 0;
-    transform: translate(0, -20px);
 }
 .home-text p {
     font-size: 18px;
