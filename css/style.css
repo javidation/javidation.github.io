@@ -211,6 +211,7 @@ button{
 .btnall{
     margin: 6px 10px;
 }
+
 /*Animation Keyfrmes*/
 @keyframes fadeIn{
     0%{
@@ -251,54 +252,6 @@ button{
     100%{
         transform: rotate(360deg);
     }
-}
-/*Background Cricle*/
-.bg-circles{
-    position: fixed;
-    top: 0;
-    height: 100%;
-    max-width: 1200px;
-    width: calc(100% - 30px);
-    left: 50%;
-    transform: translateX(-50%);
-}
-.bg-circles div{
-    position: absolute;
-    border-radius: 50%;
-}
-.bg-circles .circle-1{
-    height: 60px;
-    width: 60px;
-    background-color: var(--blue);
-    left: 5%;
-    top: 10%;
-    opacity: .3;
-    animation: zoomInOut 8s linear infinite;
-}
-.bg-circles .circle-2{
-    width: 80px;
-    height: 80px;
-    background-color: var(--red-color);
-    left: 30%;
-    top: 50%;
-    opacity: .4;
-    animation: bounceTop 5s ease-in-out infinite;
-}
-.bg-circles .circle-3{
-    height: 120px;
-    width: 120px;
-    background-color: var(--white);
-    top: 40%;
-    right: -60px;
-    opacity: .6;
-}
-.bg-circles .circle-4{
-    height: 50px;
-    width: 50px;
-    background-color: var(--orange);
-    top: 80%;
-    left: -30px;
-    opacity: .6;
 }
 /*OVERLAY*/
 .overlay{
@@ -441,10 +394,10 @@ button{
     width: 100%;
     padding: 35px 15px;
     overflow-y: auto;
-    visibility: hidden;
+    display: none;
 }
 .header.active .nav{
-    visibility: visible;
+    display: block;
 }
 .header .nav-inner{
     min-height: calc(100vh - 70px);
@@ -463,7 +416,6 @@ button{
 }
 .header.active .nav-inner{
     opacity: 1;
-
 }
 .header .nav-inner ul li{
     text-align: center;
@@ -507,9 +459,30 @@ button{
     width: 50%;
     padding: 10px;
 }
+.home-text .javid{
+    color:var(--orange);
+    transition: color .5s ease-in-out;
+}
+.home-text .javid:hover{
+    color:var(--white);
+}
+.home-text .javid:hover span{
+    opacity: 1;
+    display: none;
+}
+.home-text .javid:hover::before{
+    width: 100%;
+    content: 'About Me';
+    color:var(--cyan-light);
+}
+.home-text .h-button span{
+    display: inline-block;
+    transition: .25s cubic-bezier(.5,- 1, .5, 2);
+    opacity: 0;
+    transform: translate(0, -20px);
+}
 .home-text p {
     font-size: 18px;
-   
 }
 .home-text h1 {
     font-size: 50px;
@@ -1128,5 +1101,4 @@ input[type=text] {
       max-width: 25%;
       font-size: 10px;
     }
-
 }
