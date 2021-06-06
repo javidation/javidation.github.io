@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /* colors*/
 :root{
-     --backgorund-color :#3C4CAD;
+    --backgorund-color :#3C4CAD;
     --accend-color :#240E88;
     --red-color:#ec0808;
     --red-color-2:#f79b9b;
@@ -239,10 +239,10 @@ button{
 }
 @keyframes bounceTop{
     0%,100%{
-        transform: translateY(-50px);
+        transform: translateX(-50px);
     }
     50%{
-        transform: translateY(0px);
+        transform: translateX(0px);
     }
 }
 @keyframes spin{
@@ -516,6 +516,7 @@ button{
   
     width: 100%;
     border-radius: 50%;
+   
 }
 .youtube{
     color: white;
