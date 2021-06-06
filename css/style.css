@@ -510,6 +510,7 @@ button{
     margin: auto;
     box-shadow: 2px 2px 2px 2px rgba(97, 94, 94, 0.25),
     -3px -3px 40px rgba(80, 79, 79,.40);
+    animation: bounceTop 7s ease infinite;
 }
 .home-img .img-box img{
   
