@@ -725,6 +725,14 @@ button{
 .protfilo-item-detalis{
     display: none;
 }
+.general-info ul li:nth-child(2) span a{
+    color: var(--green-color);
+    transition: color .3s ease-in , font-weight .4s ease-in;
+}
+.general-info ul li:nth-child(2) span a:hover{
+    color: var(--red-color);
+    font-weight: 500;
+}
 .general-info ul li:nth-child(3) span a{
     color: var(--green-color);
     transition: color .3s ease-in , font-weight .4s ease-in;
@@ -738,14 +746,6 @@ button{
     transition: color .3s ease-in , font-weight .4s ease-in;
 }
 .general-info ul li:nth-child(4) span a:hover{
-    color: var(--red-color);
-    font-weight: 500;
-}
-.general-info ul li:nth-child(5) span a{
-    color: var(--green-color);
-    transition: color .3s ease-in , font-weight .4s ease-in;
-}
-.general-info ul li:nth-child(5) span a:hover{
     color: var(--red-color);
     font-weight: 500;
 }
